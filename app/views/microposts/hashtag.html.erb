@@ -1,0 +1,9 @@
+<h2>ハッシュタグ #<%= @tag.hashname %></h2>
+    <ul>
+        <% @microposts.each do |micropost| %>
+            <li>
+                <p><%= "投稿者：" + micropost.user.name %></p>
+                <p><%= render_with_hashtags(micropost.content) %></p>
+            </li>
+        <% end %>
+    </ul>

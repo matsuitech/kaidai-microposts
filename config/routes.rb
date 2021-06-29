@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   
   resources :favorites, only: [:create, :destroy]
   
+  get '/hashtags/:name/microposts', to: "microposts#hashtag" 
+  
 end
